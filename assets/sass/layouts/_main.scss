@@ -1,0 +1,112 @@
+.main {
+    padding: 1%;
+    display: flex;
+&__container {
+        border: solid;
+        border-color: $sable;
+        border-width: 2px;
+        width: 50%;
+        padding: 1%;
+        }
+&__blog-left1 {
+    padding: 1%;
+    border: solid $charcoal 2px;
+}
+&__blog-left1-img {
+    width: 100%;
+}
+&__blog-left1-title {
+    font-family: $ubuntu;
+    font-weight: $bold;
+    font-size: $large;
+    margin-top: 1%;
+}
+&__blog-left1-text {
+    font-family: $ubuntu;
+    font-size: $medium;
+    text-align: justify;
+    margin-top: 1%;
+}
+&__blog-left1-instructor {
+    font-family: $ubuntu;
+    font-size: $medium;
+    font-weight: $bold;
+}
+&__blog-left2 {
+    padding: 1%;
+    border: solid $charcoal 2px;
+    margin-top: 1%;
+}
+&__blog-left2-img {
+    width: 100%;
+}
+&__blog-left2-title {
+    font-family: $ubuntu;
+    font-weight: $bold;
+    font-size: $large;
+    margin-top: 1%;
+}
+&__blog-left2-text {
+    font-family: $ubuntu;
+    font-size: $medium;
+    text-align: justify;
+    margin-top: 1%;
+}
+&__blog-left2-instructor {
+    font-family: $ubuntu;
+    font-size: $medium;
+    font-weight: $bold;
+}
+&__container2 {
+    border: solid;
+    border-color: $sable;
+    border-width: 2px;
+    width: 50%;
+    padding: 1%;
+    margin-left: 1%;
+    }
+&__index {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+&__index-img1 {
+    width: 25%;
+    border-radius: 50%;
+    border: solid $charcoal 1px;
+}
+&__index-title {
+    text-transform: uppercase;
+    font-family: $poppins;
+    font-weight: $bold;
+    font-size: $large;
+    text-align: center;
+    margin-top: 2%;
+}
+&__index-text {
+    font-family: $ubuntu;
+    font-size: $medium;
+    text-align: justify;
+    margin-top: 1%;
+}
+&__index-list-title {
+    background-color: $charcoal;
+    color: $white;
+    text-align: center;
+    font-family: $poppins;
+    font-weight: $bold;
+}
+&__index-list-item {
+    font-family: $ubuntu;
+    list-style: circle;
+    font-size: $medium;
+}
+&__index-list-link
+{
+    text-decoration: none;
+}
+&__index-animation-container {
+    display: flex;
+    justify-content: center;
+}
+}
