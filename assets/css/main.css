@@ -1,21 +1,84 @@
 @charset "UTF-8";
-.main__index-animation {
-  width: 25%;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes forward-backward {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(120px);
+  }
+  0% {
+    transform: translateX(0px);
+  }
+}
+.navbar-nav {
+  text-align: right;
 }
 
-.navbar-nav {
+.navbar-collapse {
+  text-align: right;
   justify-content: flex-end;
+}
+
+.navbar__logo {
+  margin-left: 20px;
+}
+
+.nav-item {
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-link {
+  text-align: right;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar-link:hover {
+  background-color: transparent;
+  color: #FFAF6D;
+}
+
+.navbar__ham {
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.navbar__ham:hover {
+  color: #FFA500;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+.navbar-dark .navbar-toggler:focus {
+  border: none;
+  color: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 .main {
   padding: 1%;
-  display: flex;
 }
 .main__container {
   border: solid;
   border-color: #060606;
   border-width: 2px;
-  width: 50%;
+  width: 100%;
   padding: 1%;
 }
 .main__blog-left1 {
@@ -42,6 +105,16 @@
   font-size: 16px;
   font-weight: 700;
 }
+.main__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  align-items: baseline;
+}
+.main__icon-number {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
 .main__blog-left2 {
   padding: 1%;
   border: solid #2E1503 2px;
@@ -55,6 +128,12 @@
   font-weight: 700;
   font-size: 20px;
   margin-top: 1%;
+}
+.main__social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin: auto;
 }
 .main__blog-left2-text {
   font-family: "Ubuntu", sans-serif;
@@ -71,9 +150,8 @@
   border: solid;
   border-color: #060606;
   border-width: 2px;
-  width: 50%;
+  width: 100%;
   padding: 1%;
-  margin-left: 1%;
 }
 .main__index {
   display: flex;
@@ -114,13 +192,75 @@
 .main__index-list-link {
   text-decoration: none;
 }
-.main__index-animation-container {
-  display: flex;
-  justify-content: center;
+.main__index-animation {
+  margin: auto;
+  width: 50%;
+}
+.main__index-animation svg path.gear {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 80% 80%;
+}
+.main__index-animation svg path.code {
+  animation-name: forward-backward;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .footer {
   background-color: #060606;
+  text-align: center;
+  height: 25%;
+}
+.footer__text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 2%;
+}
+.footer__text-container {
+  display: flex;
+  justify-content: center;
+}
+.footer__list-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-top: 7%;
+}
+.footer__list-item {
+  color: #FFFFFF;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+.footer__input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.footer__input:focus {
+  background-color: #FFAF6D;
+}
+.footer__button {
+  margin-left: 10px;
+  background-color: #FFAF6D;
+  border-radius: 10px;
+  font-family: .footer__button ubuntu;
+}
+.footer__button:hover {
+  background-color: #FFFFFF;
 }
 
 .hero-section {
@@ -129,7 +269,51 @@
   padding: 1%;
 }
 .hero-section__img {
-  width: 50%;
+  width: 760px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 1fr;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  }
+  .footer .footer__list-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .footer .footer__list {
+    margin: 0;
+  }
+  .footer .footer__input-container {
+    display: block;
+    text-align: center;
+  }
+  .footer .footer__input {
+    margin-bottom: 10px;
+  }
+  .footer .footer__button {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
 
 /*!

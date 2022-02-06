@@ -1,11 +1,12 @@
 .main {
     padding: 1%;
-    display: flex;
+
+    
 &__container {
         border: solid;
         border-color: $sable;
         border-width: 2px;
-        width: 50%;
+        width: 100%;
         padding: 1%;
         }
 &__blog-left1 {
@@ -32,6 +33,17 @@
     font-size: $medium;
     font-weight: $bold;
 }
+&__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    align-items: baseline;
+}
+
+&__icon-number {
+font-family: $ubuntu;
+font-size: $medium;
+}
 &__blog-left2 {
     padding: 1%;
     border: solid $charcoal 2px;
@@ -45,6 +57,12 @@
     font-weight: $bold;
     font-size: $large;
     margin-top: 1%;
+}
+&__social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin: auto;
 }
 &__blog-left2-text {
     font-family: $ubuntu;
@@ -61,9 +79,8 @@
     border: solid;
     border-color: $sable;
     border-width: 2px;
-    width: 50%;
+    width: 100%;
     padding: 1%;
-    margin-left: 1%;
     }
 &__index {
     display: flex;
@@ -105,8 +122,22 @@
 {
     text-decoration: none;
 }
-&__index-animation-container {
-    display: flex;
-    justify-content: center;
+&__index-animation {
+    margin: auto;
+    width: 50%;
+    svg path.gear {
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: 80% 80%;
+    }
+    
+    svg path.code {
+        animation-name: forward-backward;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 }
 }
